@@ -4,11 +4,10 @@
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   z-index: 9999;
   background: $primary;
   transition: 0.4s all ease;
@@ -16,5 +15,14 @@
   img {
     width: 100px;
     margin: auto;
+    transition: 0.4s all ease;
+  }
+
+  &.hide {
+    width: 0%;
+
+    img {
+      opacity: 0;
+    }
   }
 }

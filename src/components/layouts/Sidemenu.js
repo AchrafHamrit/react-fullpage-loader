@@ -1,7 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styling/sidemenu.scss';
 
-const Sidemenu = () => {
+const Sidemenu = ({ setNewLocation }) => {
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+
+    setNewLocation('/' + e.target.name);
+  };
+
   return (
     <div className='sidemenu'>
       <div className='humberger'>
@@ -10,19 +17,34 @@ const Sidemenu = () => {
       </div>
       <ul>
         <li>
-          <a className='title' href='h'>
+          <Link
+            className='title'
+            to='home'
+            name='home'
+            onClick={handleLinkClick}
+          >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a className='title' href='h'>
+          <Link
+            className='title'
+            to='about'
+            name='about'
+            onClick={handleLinkClick}
+          >
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a className='title' href='h'>
+          <Link
+            className='title'
+            to='contact'
+            name='contact'
+            onClick={handleLinkClick}
+          >
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

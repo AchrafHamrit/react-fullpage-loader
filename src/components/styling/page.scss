@@ -1,0 +1,25 @@
+@import './variables';
+
+.page {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+
+    h2 {
+      color: $primary;
+      font-size: 2rem;
+      font-weight: 700;
+      display: inline;
+    }
+
+    img {
+      width: 250px;
+    }
+  }
+}

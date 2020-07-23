@@ -1,0 +1,20 @@
+@import './variables';
+
+.loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: $primary;
+  transition: 0.4s all ease;
+
+  img {
+    width: 100px;
+    margin: auto;
+  }
+}

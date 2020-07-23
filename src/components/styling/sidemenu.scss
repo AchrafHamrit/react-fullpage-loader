@@ -1,0 +1,73 @@
+@import './variables';
+
+.sidemenu {
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: 0.5s all ease;
+  width: 90px;
+
+  .humberger {
+    padding: 0 30px;
+    transition: 0.5s all ease;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      border-radius: 3px;
+      background-color: $primary;
+      transition: 0.5s all ease;
+
+      &:first-child {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  ul {
+    padding: 0 20px;
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    transition: 0.4s all ease;
+
+    li {
+      display: flex;
+      padding: 15px 0;
+      transform: translateX(10px);
+
+      .title {
+        visibility: visible;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $primary;
+    width: 300px;
+
+    .humberger {
+      span {
+        transform: rotate(90deg);
+        background-color: white;
+      }
+    }
+
+    ul {
+      opacity: 1;
+      transform: translateX(-10px);
+
+      .title {
+        visibility: visible;
+      }
+    }
+  }
+}

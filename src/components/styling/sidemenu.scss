@@ -35,7 +35,6 @@
     list-style: none;
     font-size: 1.3rem;
     font-weight: 600;
-    color: white;
     opacity: 0;
     transition: 0.4s all ease;
 
@@ -43,9 +42,14 @@
       display: flex;
       padding: 15px 0;
       transform: translateX(10px);
+      transition: 0.4s all ease;
 
       .title {
-        visibility: visible;
+        color: white;
+      }
+
+      &:hover {
+        opacity: 0.5;
       }
     }
   }
@@ -64,10 +68,6 @@
     ul {
       opacity: 1;
       transform: translateX(-10px);
-
-      .title {
-        visibility: visible;
-      }
     }
   }
 }

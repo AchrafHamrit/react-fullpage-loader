@@ -10,13 +10,19 @@ const Sidemenu = () => {
       </div>
       <ul>
         <li>
-          <span className='title'>Home</span>
+          <a className='title' href='h'>
+            Home
+          </a>
         </li>
         <li>
-          <span className='title'>About</span>
+          <a className='title' href='h'>
+            About
+          </a>
         </li>
         <li>
-          <span className='title'>Contact</span>
+          <a className='title' href='h'>
+            Contact
+          </a>
         </li>
       </ul>
     </div>
